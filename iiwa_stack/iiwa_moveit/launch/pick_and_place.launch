@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="robot_name" default="iiwa"/>
+    <!--Put in a namespace to allow many instances to run-->
+    <group ns="$(arg robot_name)" >
+        <!--Launch pick and place script-->
+        <node pkg="iiwa_moveit" name="pick_and_place" type="pick_and_place.py" output="screen"/>
+    </group>
+</launch>
